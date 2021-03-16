@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Онлайн-школа</title>
+	<link rel="stylesheet" type="text/css" href="styles/default.css">
+	<link rel="stylesheet" type="text/css" href="styles/main.css">
+	<link rel="stylesheet" type="text/css" href="styles/animate.css">
+	<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+	<header class="header container mt-8">
+		<div class="flex justify-between items-center">
+			<div class="header__logo"></div>
+			<nav class="horizontal_navs w-100 max-w-47 flex justify-between">
+				<li><a href="#">бесплатно</a></li>
+				<li><a href="#">индивидуально</a></li>
+				<li><a href="#">о нас</a></li>
+				<li><a href="#">Оставить заявку</a></li>
+			</nav>
+			<button class="block button button-blue button-glitch">Личный кабинет</button>
+		</div>
+		<div class="container flex relative ">	
+			<div>			
+				<div class="glitch w-44_6 pt-44">
+					<div class="glitch__text" data-text="ДА! ЭТО ЕЩЁ">ДА! ЭТО ЕЩЁ</div>
+					<div class="glitch__text" data-text="один сайт с ">один сайт с</div>
+					<div class="glitch__text" data-text="курсами,">курсами,</div>
+					<div class="glitch__text glitch__text-red" data-text="но зато какой!">но зато какой!</div>
+				</div>
+				<div class="w-100 mt-8 relative">
+					<input type="text" name="search" class="input input-lg input-search w-full">
+					<button class="search-button"><img src="images/svg/icons/search.svg"></button>
+				</div>
+				<div class="flex flex-wrap w-44_6 checkboxes mt-8">
+					<div class="checkbox">
+						<input type="checkbox" id="vehicle1" name="vehicle1" value="1">
+						<label for="vehicle1" class="badge">uI-UX</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="vehicle2" name="vehicle2" value="2">
+						<label for="vehicle2" class="badge">webdesign</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="vehicle3" name="vehicle3" value="3">
+						<label for="vehicle3" class="badge">logo</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="vehicle4" name="vehicle4" value="4">
+						<label for="vehicle4" class="badge">HTML</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="vehicle5" name="vehicle5" value="5">
+						<label for="vehicle5" class="badge">CSS</label>
+					</div>
+					<div class="checkbox">
+						<input type="checkbox" id="vehicle6" name="vehicle6" value="6">
+						<label for="vehicle6" class="badge">FLAT</label>
+					</div>
+				</div>
+			</div>	
+			<div class="absolute inset-y-40 -right-44"><img src="images/svg/1.svg"></div>
+		</div>
+	</header>
+	
+	<div class="container mt-48 mb-44">
+		<div class="main-title-bl-md main-title-bl-shadow text-center">курсы</div>
+		<div class="main-sub-title-sm max-w-30 text-center w-full mx-auto">тут должны были быть курсы, но получилось, то что получилось.</div>
+	</div>
+
+	<div class="container">
+		<div class="main-title-w max-w-md mb-20 pt-1">Иллюстра нутый курс</div>
+		<div class="flex">
+			<button class="badge mr-4 mb-4">uI-UX</button>
+			<button class="badge mr-4 mb-4 active">webdesign</button>
+			<button class="badge mb-4">logo</button>
+		</div>
+		<div class="main-title-w-sm max-w-30">стань дизайнером ЗА  7 дней</div>
+		<div class="main-text-w-sm max-w-30">
+			Дизайнер - сверхприспосабливаемые аэробные живые организмы, cпособные долгое время обходиться без сна, пищи и денег. Теряют сознание при виде зеленых букв на красном фоне.
+		</div>
+		<button class="button button-blue button-glitch mt-12">иллюстрануться</button>
+		<div class="absolute top-0 -right-16"><img src="images/svg/2.svg"></div>
+	</div>
+
+	<div class="container mt-60 mb-28 text-right">
+		<div class="absolute -top-60 -left-64 -z-1"><img src="images/svg/3.svg"></div>
+
+		<div class="main-title-w max-w-3xl mb-20 mr-0 ml-auto">Курс - в любой непонятной ситуации вали все на дизайнера</div>
+		<div class="mr-0 ml-auto">
+			<button class="badge mb-4 active">html</button>
+			<button class="badge ml-4 mb-4">css</button>
+		</div>
+		<div class="main-title-w-sm max-w-25 mr-0 ml-auto">Наверстаем упущенное</div>
+		<div class="main-text-w-sm max-w-25 mr-0 ml-auto">
+			Здесь тоже должно было быть описание, но дизайнер не захотел делать его бесплатно. 
+		</div>
+		<button class="button button-blue button-glitch mt-12 min-w-14">тык</button>
+	</div>
+
+	<div class="container container-grey flex justify-between items-center pt-8 px-12 pb-12 mb-16 mt-64">
+		<div>
+			<div class="main-sub-title-r-sm max-w-26">в режиме реального времени</div>
+			<div class="main-title-bl-md main-title-bl-lh-sm max-w-26 mb-2">приобретай курсы или индивидуальные часы</div>
+			<div class="main-text-sm-gry max-w-30">
+				Здесь вы не найдете записанные уроки, мы будем вести вас от начала и до конца в режиме реального времени.
+			</div>
+		</div>
+		<div>
+			<div class="main-title-bl-sm text-center max-w-15">
+				60 
+				<br>
+				первых минут бесплатно
+			</div>
+			<div class="text-center mt-8"><button class="button button-blue">попробовать</button></div>	
+		</div>
+	</div>
+
+	<div class="container mt-40 mb-16">
+		<div class="main-title-bl-md text-center">выбери своего наставника</div>
+		<div class="main-sub-title-sm max-w-30 text-center w-full mx-auto">это те, кто тут главный. пока.но, скоро им станешь и ты.</div>
+	</div>
+
+	<div class="container-xl mx-auto flex flex-wrap justify-around mb-56 mt-36">
+		<div class="mx-8 my-16">
+			<div class="main-title-bl-md text-center">руслан</div>
+			<div class="rounded-full rounded-image max-w-15 h-15 mx-auto relative">
+				<img class="rounded-full" src="images/png/1.png">	
+				<div class="badge-md-bl text-center absolute bottom-0 inset-x-center whitespace-nowrap">сеньор-помидор</div>			
+			</div>	
+			<div class="main-text-w-sm max-w-17_5 text-center mx-auto mt-8">
+				он тут самый умный, поэтому ему лень давать уроки, но ты можешь попробовать
+			</div>
+		</div>
+		<div class="mx-8 my-16">
+			<div class="main-title-bl-md text-center">максим</div>
+			<div class="rounded-full rounded-image max-w-15 h-15 mx-auto relative">
+				<img class="rounded-full" src="images/png/2.png">	
+				<div class="badge-md-bl text-center absolute bottom-0 inset-x-center whitespace-nowrap">тоже крутой</div>			
+			</div>	
+			<div class="main-text-w-sm max-w-17_5 text-center mx-auto mt-8">
+				решает проблемы о которых никто не знает, таким способом, который никто не понимает
+			</div>
+		</div>
+		<div class="mx-8 my-16">
+			<div class="main-title-r-md text-center">мария</div>
+			<div class="rounded-full rounded-image max-w-15 h-15 mx-auto relative">
+				<img class="rounded-full" src="images/png/3.png">	
+				<div class="badge-md-r text-center absolute bottom-0 inset-x-center whitespace-nowrap">веб-дизайнер</div>			
+			</div>	
+			<div class="main-text-w-sm max-w-17_5 text-center mx-auto mt-8">
+				дизайнер этой платформы. иллюстранутая на всю голову. Но, у нас другой нет.
+			</div>
+		</div>
+	</div>
+
+	<div class="container mt-40 mb-16">
+		<div class="main-title-bl-md text-center">Что я могу потерять</div>
+		<div class="main-sub-title-sm max-w-30 text-center w-full mx-auto">
+			здесь тереяем время мы, но пока нам это не перестало нравиться, ты можешь этим воспользоваться
+		</div>
+	</div>
+
+	<div class="container relative mt-16 mb-64">
+		<div class="absolute -left-64">
+			<img src="images/svg/4.svg">
+		</div>
+		<div class="ml-auto mr-0 max-w-30">
+			<div class="main-title-bl-md main-title-bl-lh-sm text-right mb-12">
+				Курс -
+				<br> в любой непонятной
+				<br> ситуации вали все на 
+				<br> дизайнера
+			</div>
+			<div class="trajectory ml-auto mr-0">
+				<div class="trajectory__event">
+					<div class="trajectory__line">
+						<div class="number active"><span>1</span></div>
+						<div class="line active"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm active">
+						За 7 дней ты узнаешь, что HTmL это не микроорганизмы, которые живут на поверхности океана
+					</div>
+				</div>
+				<div class="trajectory__event">
+					<div class="trajectory__line">
+						<div class="number active"><span>2</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm active">
+						Сверстаешь свой первый “ Все супер, только переделайте пожалуйста. все!”
+					</div>
+				</div>
+				<div class="trajectory__event">
+					<div class="trajectory__line">
+						<div class="number"><span>3</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Больше никогда не попросишь у программиста починить твой сраный утюг
+					</div>
+				</div>
+				<div class="trajectory__event">
+					<div class="trajectory__line">
+						<div class="number"><span>4</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Тут должно было быть описание того чему ты научишся но дизайнер не написал этого
+					</div>
+				</div>
+				<div class="trajectory__event">
+					<div class="trajectory__line">
+						<div class="number"><span>5</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Тут должно было быть описание того чему ты научишся но дизайнер не написал этого
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container flex justify-between advantages mt-64 mb-40">
+		<div class="relative advantages__card">
+			<div class="absolute left-16 advantages__icon"></div>
+			<div class="advantages__name"> ВИДЕО-АУДИО СВЯЗЬ</div>
+		</div>
+		<div class="relative advantages__card">
+			<div class="advantages__icon">
+				<img src="images/svg/advantages/2.svg" class="absolute left-8">
+			</div>
+			<div class="advantages__name">Проверка ДОМАШНИХ ЗАДАНИЙ</div>
+		</div>
+		<div class="relative advantages__card">
+			<div class="absolute left-16 advantages__icon"></div>
+			<div class="advantages__name">первые 3 ЛАЙКА НА БЕХАНСЕ</div>
+		</div>
+		<div class="relative advantages__card">
+			<div class="absolute left-16 advantages__icon"></div>
+			<div class="advantages__name">Помощь с первым заказом</div>
+		</div>
+	</div>
+
+	<div class="container container-grey p-16 mt-40 mb-28 flex justify-between items-center">
+		<div class="max-w-md w-100 mt-4 mb-8"><img src="images/svg/advantages/2.svg" class=""></div>
+		<div class="main-title-bl-md main-title-bl-lh-sm max-w-lg">
+			удобный интерфейс личного кабинета с психоустойчивым куратором, который сможет отвечать на одни и те же вопросы.
+		</div>
+	</div>
+
+	<div class="container mt-28 mb-52">
+		<div class="main-title-bl-xl text-center">оставить заявку</div>
+		<div class="relative">
+			<form class="max-w-41">
+				<div class="flex flex-wrap mx-w-714 radios mb-8">
+					<div class="radio">
+						<input type="radio" id="submit-form-code" name="submit-form-radio" value="1">
+						<label for="submit-form-code" class="badge">код</label>
+					</div>
+					<div class="radio">
+						<input type="radio" id="submit-form-web-design" name="submit-form-radio" value="2">
+						<label for="submit-form-web-design" class="badge">вебдизайн</label>
+					</div>
+				</div>
+
+
+				<div class="w-100 flex justify-between">
+					<div class="w-26 mr-7">
+						<label class="block form-label form-label-required">имя</label>
+						<input type="text" name="submit-form-name" class="form-input form-input-required w-100" placeholder="имя">
+					</div>
+					<div class="w-100">
+						<!-- <label class="block form-label form-label-required">Фамилия</label> -->
+						<label class="block form-label-required form-label-validate-error">ВВЕДИТЕ ФАМИЛИЮ</label>
+						<input type="text" name="submit-form-surname" class="form-input form-input-required w-100 form-validate-error" placeholder="фамилия">
+					</div>		
+				</div>
+				<div class="w-100">
+					<label class="block form-label">почта</label>
+					<input type="email" name="submit-form-email" class="form-input w-100" placeholder="почта">
+				</div>
+				<div class="w-100">
+					<label class="block form-label">ССЫЛКА НА ПОРТФОЛИО</label>
+					<input 
+						type="text" 
+						name="submit-form-email" 
+						class="form-input form-input-text-sm w-100"
+						placeholder="МОЖНО ОСТАВИТЬ ССЫЛКУ НА ГУГЛ ДИСК И ДРУГИЕ ВСЕМ ИЗВЕСТНЫЕ ИСТОЧНИКИ"
+					>
+				</div>
+
+				<div class="flex flex-wrap w-100 mt-6 mb-8 checkboxes">
+					<div class="checkbox my-0">
+						<input type="checkbox" id="submit-form-behance" name="form-social" value="1">
+						<label for="submit-form-behance" class="checkbox-svg">
+							<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
+								<path class="svg-bg" d="M15.5 31C24.0604 31 31 24.0604 31 15.5C31 6.93959 24.0604 0 15.5 0C6.93959 0 0 6.93959 0 15.5C0 24.0604 6.93959 31 15.5 31Z"/>
+								<path class="svg-content" d="M21.0567 12.8034C16.5798 12.8034 16.574 17.2635 16.574 17.2864C16.574 17.2864 16.2673 21.752 21.0567 21.752C21.0567 21.752 25.0509 21.9791 25.0509 18.6441H22.9999C22.9999 18.6441 23.0679 19.8997 21.125 19.8997C21.125 19.8997 19.074 20.0361 19.074 17.8713H25.1192C25.1192 17.8713 25.784 12.8034 21.0567 12.8034ZM19.051 16.3088C19.051 16.3088 19.3011 14.5134 21.1023 14.5134C22.909 14.5134 22.8806 16.3088 22.8806 16.3088H19.051ZM13.9267 15.1613C13.9267 15.1613 15.705 15.0307 15.705 12.9399C15.705 10.8549 14.2506 9.83203 12.404 9.83203H6.33008V21.5075H12.4035C12.4035 21.5075 16.1137 21.6213 16.1137 18.0589C16.1139 18.0589 16.2731 15.1613 13.9267 15.1613ZM9.00634 11.9057H12.4038C12.4038 11.9057 13.2277 11.9057 13.2277 13.1214C13.2277 14.3371 12.7447 14.5134 12.1935 14.5134H9.00634V11.9057ZM12.2335 19.4338H9.00634V16.3088H12.4038C12.4038 16.3088 13.6369 16.2975 13.6311 17.9166C13.6311 19.2805 12.7165 19.4225 12.2335 19.4338ZM18.5454 10.5195V11.9571H23.3636V10.5195H18.5454Z"/>
+							</svg>
+						</label>
+					</div>
+					<div class="checkbox my-0">
+						<input type="checkbox" id="submit-form-instagram" name="form-social" value="2">
+						<label for="submit-form-instagram" class="checkbox-svg">
+							<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
+								<path class="svg-bg" d="M18.4668 15.5C18.4668 17.1385 17.1385 18.4668 15.5 18.4668C13.8615 18.4668 12.5332 17.1385 12.5332 15.5C12.5332 13.8615 13.8615 12.5332 15.5 12.5332C17.1385 12.5332 18.4668 13.8615 18.4668 15.5Z"/>
+								<path class="svg-bg" d="M22.4383 10.2506C22.2956 9.86414 22.0681 9.51434 21.7725 9.22722C21.4854 8.93158 21.1358 8.70406 20.7491 8.56144C20.4355 8.43964 19.9644 8.29465 19.0966 8.25516C18.1579 8.21235 17.8764 8.20312 15.5 8.20312C13.1233 8.20312 12.8418 8.21211 11.9033 8.25492C11.0356 8.29465 10.5642 8.43964 10.2508 8.56144C9.86414 8.70406 9.51434 8.93158 9.22746 9.22722C8.93182 9.51434 8.70429 9.86391 8.56144 10.2506C8.43964 10.5642 8.29465 11.0356 8.25516 11.9033C8.21235 12.8418 8.20312 13.1233 8.20312 15.5C8.20312 17.8764 8.21235 18.1579 8.25516 19.0966C8.29465 19.9644 8.43964 20.4355 8.56144 20.7491C8.70429 21.1358 8.93158 21.4854 9.22722 21.7725C9.51434 22.0681 9.86391 22.2956 10.2506 22.4383C10.5642 22.5603 11.0356 22.7053 11.9033 22.7448C12.8418 22.7876 13.123 22.7966 15.4997 22.7966C17.8767 22.7966 18.1581 22.7876 19.0964 22.7448C19.9641 22.7053 20.4355 22.5603 20.7491 22.4383C21.5253 22.1388 22.1388 21.5253 22.4383 20.7491C22.5601 20.4355 22.705 19.9644 22.7448 19.0966C22.7876 18.1579 22.7966 17.8764 22.7966 15.5C22.7966 13.1233 22.7876 12.8418 22.7448 11.9033C22.7053 11.0356 22.5603 10.5642 22.4383 10.2506ZM15.5 20.0701C12.9757 20.0701 10.9294 18.024 10.9294 15.4997C10.9294 12.9754 12.9757 10.9294 15.5 10.9294C18.024 10.9294 20.0703 12.9754 20.0703 15.4997C20.0703 18.024 18.024 20.0701 15.5 20.0701ZM20.251 11.8168C19.6611 11.8168 19.1829 11.3386 19.1829 10.7487C19.1829 10.1588 19.6611 9.68061 20.251 9.68061C20.8409 9.68061 21.3191 10.1588 21.3191 10.7487C21.3189 11.3386 20.8409 11.8168 20.251 11.8168Z"/>
+								<path class="svg-bg" d="M15.5 0C6.9409 0 0 6.9409 0 15.5C0 24.0591 6.9409 31 15.5 31C24.0591 31 31 24.0591 31 15.5C31 6.9409 24.0591 0 15.5 0ZM24.3467 19.1695C24.3037 20.1169 24.153 20.7638 23.933 21.33C23.4707 22.5256 22.5256 23.4707 21.33 23.933C20.764 24.153 20.1169 24.3034 19.1697 24.3467C18.2206 24.39 17.9174 24.4004 15.5002 24.4004C13.0829 24.4004 12.7799 24.39 11.8305 24.3467C10.8833 24.3034 10.2362 24.153 9.67023 23.933C9.07612 23.7095 8.53829 23.3593 8.09365 22.9063C7.64097 22.4619 7.2907 21.9239 7.06719 21.33C6.84724 20.764 6.69658 20.1169 6.65353 19.1697C6.60978 18.2204 6.59961 17.9171 6.59961 15.5C6.59961 13.0829 6.60978 12.7796 6.6533 11.8305C6.69634 10.8831 6.84676 10.2362 7.06672 9.67C7.29022 9.07612 7.64073 8.53806 8.09365 8.09365C8.53806 7.64073 9.07612 7.29046 9.67 7.06696C10.2362 6.847 10.8831 6.69658 11.8305 6.6533C12.7796 6.61002 13.0829 6.59961 15.5 6.59961C17.9171 6.59961 18.2204 6.61002 19.1695 6.65353C20.1169 6.69658 20.7638 6.847 21.33 7.06672C21.9239 7.29022 22.4619 7.64073 22.9066 8.09365C23.3593 8.53829 23.7098 9.07612 23.933 9.67C24.1532 10.2362 24.3037 10.8831 24.3469 11.8305C24.3902 12.7796 24.4004 13.0829 24.4004 15.5C24.4004 17.9171 24.3902 18.2204 24.3467 19.1695Z"/>
+							</svg>
+						</label>
+					</div>
+					<div class="checkbox my-0">
+						<input type="checkbox" id="submit-form-github" name="form-social" value="3">
+						<label for="submit-form-github" class="checkbox-svg">
+							<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
+									<path class="svg-bg" d="M15.5 0.646484C6.93625 0.646484 0 7.46648 0 15.8778C0 22.6087 4.44075 28.3166 10.5981 30.329C11.3731 30.4724 11.6573 30.0009 11.6573 29.5966C11.6573 29.2349 11.6444 28.2765 11.6379 27.0068C7.32633 27.9252 6.417 24.9634 6.417 24.9634C5.71175 23.2054 4.69262 22.7353 4.69262 22.7353C3.28858 21.7911 4.80113 21.8104 4.80113 21.8104C6.35758 21.9164 7.17521 23.3798 7.17521 23.3798C8.55729 25.7087 10.8035 25.0357 11.6896 24.6469C11.8291 23.6614 12.2282 22.991 12.6713 22.61C9.22896 22.2289 5.611 20.9192 5.611 15.0834C5.611 13.4211 6.21162 12.0622 7.20621 10.9966C7.03183 10.6117 6.50871 9.06299 7.34183 6.96532C7.34183 6.96532 8.63996 6.55715 11.6043 8.52694C12.8443 8.18853 14.1618 8.02061 15.4793 8.01286C16.7968 8.02061 18.1143 8.18853 19.3543 8.52694C22.2993 6.55715 23.5975 6.96532 23.5975 6.96532C24.4306 9.06299 23.9075 10.6117 23.7525 10.9966C24.7406 12.0622 25.3412 13.4211 25.3412 15.0834C25.3412 20.9347 21.7181 22.2225 18.2693 22.5971C18.8118 23.0543 19.3156 23.9882 19.3156 25.4155C19.3156 27.4537 19.2962 29.0916 19.2962 29.5863C19.2962 29.9854 19.5675 30.462 20.3618 30.3096C26.5631 28.3101 31 22.5984 31 15.8778C31 7.46648 24.0599 0.646484 15.5 0.646484Z"/>
+							</svg>
+						</label>
+					</div>
+					<div class="checkbox my-0">
+						<input type="checkbox" id="submit-form-facebook" name="form-social" value="4">
+						<label for="submit-form-facebook" class="checkbox-svg">
+							<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
+								<path class="svg-bg" d="M31 15.5C31 6.93867 24.0613 0 15.5 0C6.93867 0 0 6.93867 0 15.5C0 24.0613 6.93867 31 15.5 31C15.5908 31 15.6816 31 15.7725 30.9939V18.933H12.4424V15.052H15.7725V12.1941C15.7725 8.88223 17.7947 7.07793 20.7494 7.07793C22.1662 7.07793 23.3832 7.18086 23.7344 7.2293V10.6926H21.7C20.0955 10.6926 19.7807 11.4555 19.7807 12.5756V15.0459H23.6254L23.1229 18.927H19.7807V30.4006C26.2592 28.5418 31 22.5779 31 15.5Z"/>
+							</svg>
+						</label>
+					</div>
+					<div class="checkbox my-0">
+						<input type="checkbox" id="submit-form-twitter" name="form-social" value="5">
+						<label for="submit-form-twitter" class="checkbox-svg">
+							<svg width="31" height="31" viewBox="0 0 31 31" xmlns="http://www.w3.org/2000/svg">
+								<path class="svg-bg" d="M15.5 31C24.0604 31 31 24.0604 31 15.5C31 6.93959 24.0604 0 15.5 0C6.93959 0 0 6.93959 0 15.5C0 24.0604 6.93959 31 15.5 31Z"/>
+								<path class="svg-content" d="M24.9915 10.7855C24.3273 11.0971 23.6128 11.3079 22.8635 11.402C23.6286 10.917 24.2157 10.1496 24.4928 9.23375C23.777 9.68307 22.9837 10.009 22.1402 10.1847C21.4644 9.42319 20.5015 8.94727 19.4353 8.94727C17.3896 8.94727 15.7305 10.7027 15.7305 12.8672C15.7305 13.1744 15.7634 13.4735 15.8269 13.7606C12.7479 13.5971 10.0179 12.0367 8.19045 9.66436C7.87161 10.2432 7.6887 10.917 7.6887 11.6353C7.6887 12.9949 8.34324 14.1953 9.33679 14.898C8.72977 14.8779 8.15812 14.7016 7.65886 14.4072C7.65859 14.4239 7.65859 14.4405 7.65859 14.4569C7.65859 16.3562 8.93617 17.9404 10.6307 18.3002C10.3201 18.3903 9.99216 18.4379 9.6548 18.4379C9.41553 18.4379 9.18372 18.4136 8.95772 18.368C9.42907 19.925 10.797 21.0584 12.4186 21.0903C11.1504 22.1418 9.55313 22.7683 7.8169 22.7683C7.51851 22.7683 7.22287 22.7498 6.93359 22.7133C8.57229 23.8259 10.5202 24.4746 12.6122 24.4746C19.4267 24.4746 23.1534 18.5016 23.1534 13.3212C23.1534 13.1513 23.1498 12.9821 23.1426 12.8143C23.867 12.2618 24.495 11.5716 24.9915 10.7855Z"/>
+							</svg>
+						</label>
+					</div>
+				</div>
+
+				<div class="w-100 mb-8">
+					<label class="block form-label form-label-required">ЧТО Я УЖЕ УМЕЮ</label>
+					<!-- <label class="block form-label-required form-label-validate-error">ВВЕДИТЕ то что вы уже умеете</label>				 -->
+					<textarea 
+						name="submit-form-description" 
+						class="w-100 form-textarea form-input-text-sm form-input-required" 
+						placeholder="НАпИСАТЬ ПОДРОБНО И ПРО ДИЗАЙН, А НЕ В ПРИНЦИПЕ."
+					></textarea>
+					<!-- <textarea 
+						name="submit-form-description" 
+						class="w-100 form-textarea form-input-text-sm form-input-required form-validate-error" 
+						placeholder="НАпИСАТЬ ПОДРОБНО И ПРО ДИЗАЙН, А НЕ В ПРИНЦИПЕ."
+					></textarea> -->
+				</div>
+				<div class="form-text-validate-error max-w-md">
+					*пРОВЕРЬТЕ ФОРМУ ЕЩЕ РАЗ. ВВЕДИТЕ ФАМИЛИЮ. дАННАЯ ИНФОРМАЦИЯ НЕОБХОДИМА ДЛЯ ВЫДАЧИ ДИПЛОМА после прохождения курса.
+				</div>
+				<div class="flex mt-8">					
+					<button class="button button-gray mr-7">я уже с вами</button>
+					<button class="button button-blue button-glitch">зарегистрироваться</button>
+				</div>
+			</form>
+			<div class="absolute top-48 -right-72">
+				<img src="images/svg/5.svg">
+			</div>
+		</div>
+	</div>
+
+	<div class="container mb-96 mt-72">
+		<div class="absolute -left-24 inset-y-center">
+			<img src="images/svg/6.svg">
+		</div>
+		<div class="main-title-bl-xl max-w-2xl mr-0 ml-auto"><span>акция.</span><br>Приведи друга и<br> заплати за друга тоже.</div>
+	</div>
+
+	<div class="container mt-96 mb-40">
+		<div class="main-title-bl-xl text-center mb-16">Халява</div>
+
+		<div class="freebie flex justify-between items-center">
+			<div class="freebie__card flex">
+				<div class="freebie__image">
+					<img src="images/png/gallery/1.png">
+				</div>
+				<div class="freebie__content">
+					<div class="freebie__title">интенсив для чайников</div>
+					<div class="freebie__subTitle">ПРямой эфир в instagram</div>
+					<span class="freebie__badge">17 апреля</span>
+					<div class="freebie__text mt-8">Как оформить свое портфолио так, чтобы оно приносило денег?!</div>
+				</div>
+			</div>
+			<div class="freebie__state">
+				<div>
+					<button class="button button-blue button-glitch">участвовать</button>					
+				</div>
+				<p class="freebie__state-count main-title-bl-sm text-center max-w-15">
+					осталось 9 мест
+				</p>
+			</div>
+		</div>
+
+		<div class="freebie freebie-disabled flex justify-between items-center">
+			<div class="freebie__card flex">
+				<div class="freebie__image">
+					<img src="images/png/gallery/2.png">
+				</div>
+				<div class="freebie__content">
+					<div class="freebie__title">закрытая трансляция</div>
+					<div class="freebie__subTitle">ПРямой эфир в youtube</div>
+					<span class="freebie__badge">9 марта</span>
+					<div class="freebie__text mt-8">Лого за 2 часа. Иконки, как бизнес.</div>
+				</div>
+			</div>
+			<div class="freebie__state">
+				<div>
+					<button class="button button-blue button-glitch">участвовать</button>					
+				</div>
+				<p class="freebie__state-count main-title-bl-sm text-center max-w-15">
+					мест нет
+				</p>
+			</div>
+		</div>
+
+		<div class="freebie flex justify-between items-center">
+			<div class="freebie__card flex">
+				<div class="freebie__image">
+					<img src="images/png/gallery/3.png">
+				</div>
+				<div class="freebie__content">
+					<div class="freebie__title">конкурс</div>
+					<div class="freebie__subTitle">верстка за 40 минут</div>
+					<span class="freebie__badge">1 апреля</span>
+					<div class="freebie__text mt-8">Конкурс среди учеников зарегистриванных не позднее 01.01.21. Призы apple watch 6, гантели и путевка на двоих в Турцию.</div>
+				</div>
+			</div>
+			<div class="freebie__state">
+				<div>
+					<button class="button button-blue button-glitch">участвовать</button>					
+				</div>
+				<p class="freebie__state-count main-title-bl-sm text-center max-w-15">
+					осталось 2 места
+				</p>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>

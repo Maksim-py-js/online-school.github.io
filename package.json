@@ -1,0 +1,16 @@
+{
+  "name": "course",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --watch styles -o styles"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "build-css": "^0.2.0",
+    "tailwindcss": "^2.0.3"
+  }
+}

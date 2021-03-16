@@ -1,0 +1,692 @@
+// html {
+// 	cursor: url('../images/cursors/cursor-1.png'), auto;
+// }
+@mixin main-red-bg {
+	background: #FD335D;
+}
+@mixin main-red-color {
+	color: #FD335D;
+}
+
+@mixin main-blue-bg {
+	background: #23F6F0;
+}
+@mixin main-blue-color {
+	color: #23F6F0;
+}
+@mixin main-blue-fill {
+	fill: #23F6F0;
+}
+
+@mixin main-grey-bg {
+	background: #2D2B2B;
+}
+@mixin main-grey-fill {
+	fill: #2D2B2B;
+}
+@mixin main-dark-grey-color {
+	color: #2D2B2B;
+}
+
+@mixin main-grey-color {
+	color: #1F1F1F;
+}
+@mixin main-md-grey-fill {
+	fill: #1F1F1F;
+}
+@mixin main-light-grey-color {
+	color: #5A5A5A;
+}
+@mixin font-FuturisExtra {
+	font-family: FuturisExtra;
+	font-style: normal;
+	font-weight: bold;
+}
+@mixin font-ProximaNova {
+	font-family: Proxima Nova;
+	font-style: normal;
+	font-weight: bold;
+}
+
+.rounded-image {
+	img {
+		width: 100%;
+		height: 100% !important;
+		object-fit: cover;
+		object-position: 50% 50%;
+	}
+}
+
+.button {
+	@include font-FuturisExtra;
+
+	padding: 6.5px 20px;
+
+	font-size: 14px;
+	line-height: 40px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	white-space: nowrap;
+}
+.button-blue {	
+	@include main-blue-bg;
+	@include main-grey-color;
+
+	position: relative;	
+}
+.button-gray {	
+	@include main-grey-bg;
+	@include main-light-grey-color;
+
+	position: relative;		
+}
+.button-glitch {
+	&:hover {
+	    &:before, &:after {
+	        display: block;
+	        content: '';
+	        position: absolute;
+	        top: 0;
+	        left: 0;
+	        height: 100%;
+	        width: 100%;
+	        opacity: .8;
+	    }
+		&:after {
+	        background: #fff;
+	        z-index: -2;
+	        animation: glitch-button .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite;
+        }
+	    &:before {
+	        @include main-red-bg;
+	        z-index: -1;
+	        animation: glitch-button .3s cubic-bezier(.25, .46, .45, .94) both infinite;
+	    }
+	}
+}
+.horizontal_navs {
+	a {
+		@include font-ProximaNova;
+		@include main-light-grey-color;
+
+		font-size: 18px;
+		line-height: 40px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+
+		transition: .4s;
+		&:hover {
+			@include main-blue-color;
+
+			text-shadow: 0px 0px 3.5px #23F6F0;
+		}
+	}
+}
+.container {	
+	width: 100%;
+	max-width: 1170px !important;
+	margin: 0 auto;
+	position: relative;
+}
+.container-xl {
+	width: 100%;
+	max-width: 1344px !important;
+	margin: 0 auto;
+	position: relative;
+}
+.container-grey {	
+	@include main-grey-bg;
+}
+.header {
+	&__logo {
+		width: 70px;
+		height: 62px;
+		background: rgba(196, 196, 196, 0.12);
+	}
+}
+.glitch {
+	&__text {		
+		@include font-FuturisExtra;
+		@include main-blue-color;
+
+		position: relative;
+
+		font-size: 64px;
+		line-height: 60px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+
+		&-red {
+			@include main-red-color;	
+		}
+		&::before,
+		&::after {
+		  content: attr(data-text);
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  width: 100%;
+		  height: 100%;
+		  background: #1F1F1F;
+		}
+		&::before {
+		  left: 2px;
+		  text-shadow: -2px 0 #49FC00;
+		  clip: rect(24px, 550px, 90px, 0);
+		  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+		}
+		&::after {
+		  left: -2px;
+		  text-shadow: -2px 0 #b300fc;
+		  clip: rect(85px, 550px, 140px, 0);
+		  animation: glitch-anim 2.5s infinite linear alternate-reverse;
+		}
+	}
+}
+.input {
+	@include font-ProximaNova;
+	@include main-light-grey-color;
+	@include main-grey-bg;
+
+	padding: 20px 60px 20px 13px;
+	caret-color: #FD335D;
+	border-radius: 12px;
+	outline: none;
+
+	font-size: 14px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+}
+.search-button {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 20;
+	width: 32px;
+	height: 33px;
+}
+.checkboxes {
+	input[type=checkbox] {
+		display: none;
+	}
+	input[type=checkbox]:checked+label {
+		&.badge {
+			@include main-red-color;
+			background: #fff;
+		}
+		svg {
+			.svg-bg {
+				@include main-blue-fill;
+			}
+		}
+	}
+	svg {
+		&:hover {
+			cursor: pointer;
+			.svg-bg {
+				@include main-blue-fill;
+			}
+		}
+	}
+	.svg-bg {
+		@include main-grey-fill;
+		transition: .4s;
+	}
+	.svg-content {
+		@include main-md-grey-fill;
+		transition: .4s;
+	}
+}
+.checkbox {		
+	margin-right: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1.2rem;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+.radios {
+	margin-top: 31px;
+	input[type=radio] {
+		display: none;
+	}
+	svg {
+		&:hover {
+			cursor: pointer;
+			.svg-bg {
+				@include main-blue-fill;
+			}
+		}
+	}
+	.svg-bg {
+		@include main-grey-fill;
+		transition: .4s;
+	}
+	.svg-content {
+		@include main-md-grey-fill;
+		transition: .4s;
+	}
+	input[type=radio]:checked+label {
+		&.badge {
+			@include main-red-color;
+			background: #fff;
+		}		
+		svg {
+			.svg-bg {
+				@include main-blue-fill;
+			}
+		}
+	}
+}
+.radio {		
+	margin-right: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 1.2rem;
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+.badge {
+	@include font-ProximaNova;	
+	@include main-light-grey-color;	
+	@include main-grey-bg;
+
+	font-size: 18px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+
+	padding: 12px 13px;
+	border-radius: 12px;
+	transition: .4s;
+
+	&:hover,
+	&.active {
+		@include main-red-color;
+		background: #fff;
+		cursor: pointer;
+	}
+}
+.badge-md-bl,
+.badge-md-r {
+	@include font-FuturisExtra;
+
+	border-radius: 12px;
+	padding: 14px 15px;
+
+	font-size: 14px;
+	line-height: 125.18%;
+	text-transform: uppercase;	
+}
+.badge-md-bl {
+	@include main-grey-color;
+	@include main-blue-bg;
+}
+.badge-md-r {
+	@include main-red-bg;
+	color: #fff;
+}
+.main-title-bl-xl,
+.main-title-bl-md,
+.main-title-r-md,
+.main-title-bl-sm,
+.main-title-w,
+.main-title-w-sm,
+.main-sub-title-r-sm {
+	@include font-FuturisExtra;
+
+	line-height: 60px;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.main-sub-title-r-sm {
+	@include main-red-color;
+	font-size: 13px;
+}
+.main-title-bl-xl {
+	@include main-blue-color;
+	font-size: 36px;
+	span {
+		@include main-red-color;
+	}
+}
+.main-title-bl-md {
+	@include main-blue-color;
+	font-size: 24px;
+}
+.main-title-bl-shadow {
+	text-shadow: 0px 0px 3.5px #23F6F0;	
+}
+.main-title-r-md {
+	@include main-red-color;
+	font-size: 24px;
+}
+.main-title-bl-lh-sm {
+	line-height: 35px !important;
+}
+.main-title-bl-sm {
+	@include main-blue-color;
+	font-size: 18px;
+	line-height: 20px !important;
+}
+.main-title-w {
+	font-size: 48px;
+}
+.main-title-w-sm {
+	font-size: 18px;
+}
+.main-sub-title-sm,
+.main-sub-title-bl-sm,
+.main-text-w-sm,
+.main-text-sm-gry {
+	@include font-ProximaNova;
+	font-size: 18px;
+	line-height: 125.18%;	
+}
+.main-sub-title-sm {	
+	@include main-light-grey-color;
+	text-transform: uppercase;
+	&.active {
+		@include main-blue-color;
+	}
+}
+.main-sub-title-bl-sm {	
+	@include main-blue-color;
+	text-transform: uppercase;
+}
+.main-text-w-sm {
+	color: #FFFFFF;
+	text-transform: uppercase;
+}
+.main-text-sm-gry {
+	@include main-light-grey-color;
+}
+.trajectory {
+	&__event {
+		display: flex;
+		&:last-child {
+			.line {
+				display: none;
+			}
+		}
+	}	
+	&__line {
+		position: relative;
+		margin-right: 39px;
+		margin-top: 6px;
+
+		.number {			
+			@include main-grey-bg;
+			border-radius: 50%;
+			width: 33px;
+			height: 33px;
+			position: relative;
+			&.active {
+				@include main-blue-bg;
+			}
+			span {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+
+				@include font-FuturisExtra;
+				@include main-grey-color;
+				font-size: 24px;
+				line-height: 34px;
+				text-align: right;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				margin-left: 1.5px;
+			}
+		}
+		.line {
+		    position: absolute;
+		    left: 50%;
+		    transform: translateX(-50%);
+		    width: 5px;
+		    @include main-grey-bg;
+		    top: 30px;
+		    bottom: -7px;
+		    z-index: -1;
+			&.active {
+				width: 5px;
+		    	@include main-blue-bg;
+			}
+		}
+	}
+	&__text {
+		max-width: 389px;
+		margin-bottom: 60px;
+	}
+}
+.advantages {
+	&__card {
+		transition: .4s;		
+		&:hover {
+			cursor: pointer;
+			transition: .4s;
+			.advantages__name {
+				@include main-blue-color;
+			}
+		}
+	}
+	&__name {
+		padding-top: 220px;
+		max-width: 200px;
+
+		@include font-FuturisExtra;
+	    @include main-dark-grey-color;
+		font-size: 24px;
+		line-height: 34px;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;	
+		transition: .4s;		
+	}
+}
+.form-input,
+.form-textarea {
+	@include font-ProximaNova;
+	@include main-grey-bg;
+
+	position: relative;
+	caret-color: #23F6F0;
+	border-radius: 12px;
+	outline: none;
+	padding: 45px 21px 35px;
+	font-size: 14px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+	color: #FFFFFF;
+	&::placeholder {
+		@include font-ProximaNova;
+		@include main-light-grey-color;
+
+		font-size: 18px;
+		line-height: 125.18%;
+		text-transform: uppercase;
+	}
+}
+.form-textarea {
+	min-height: 231px;
+	resize: none;
+	padding-top: 22px;
+}
+.form-validate-error {
+	caret-color: #FF0000;
+
+	background: rgba(255, 0, 0, 0.13);
+	border: 1px solid #FF0000;
+	box-sizing: border-box;
+	border-radius: 12px;
+
+	&::placeholder {
+		color: transparent !important; 
+	}
+}
+.form-label-validate-error {
+	@include font-FuturisExtra;
+
+	position: relative;
+	font-size: 9px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+	color: #FF0000;
+	margin-top: 11px;
+	margin-bottom: 7px;
+	padding-right: 10px;
+	text-align: right;
+}
+.form-text-validate-error {
+	@include font-FuturisExtra;
+
+	font-size: 13px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+	color: #FF0000;
+}
+.form-input-text-sm {
+	@include font-ProximaNova;
+
+	font-size: 11px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+	color: #fff;
+	&::placeholder {
+		@include font-ProximaNova;
+		@include main-light-grey-color;
+
+		font-size: 11px;
+		line-height: 125.18%;
+		text-transform: uppercase;
+	}
+}
+.form-label-required {
+	&:after {
+		@include font-FuturisExtra;
+
+		position: absolute;
+		right: 0;
+		top: -2px;
+		content: '*';
+		font-size: 13px;
+		line-height: 125.18%;
+		text-transform: uppercase;
+		color: #FF0000;
+	}
+}
+.form-label {
+	@include font-FuturisExtra;
+	@include main-blue-color;
+	position: relative;
+	font-size: 13px;
+	line-height: 125.18%;
+	text-transform: uppercase;
+
+	margin-top: 9px;
+	margin-bottom: 5px;
+}
+.freebie {
+	margin-bottom: 22px;
+	&-disabled {
+		.freebie__image {
+			filter: grayscale(100%);
+		}
+		.freebie__title {
+			color: #5A5A5A;
+		}
+		.freebie__subTitle {
+			color: #1F1F1F;
+		}
+		.freebie__badge {
+			background: #1F1F1F;
+			color: #5A5A5A;
+		}
+		.freebie__state {
+			button {
+				background: #2D2B2B;
+				color: rgba(255, 255, 255, 0.1);
+				&:hover {
+					cursor: no-drop;
+				}
+				&:after,
+				&:before {
+					display: none;
+				}
+			}
+			&-count {
+				color: #424040;
+			}
+		}
+	}
+	&__image {
+		width: 310px;
+		min-height: 280px;
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__content {
+		padding: 53px 51px 28px;
+		background: #2D2B2B;
+		width: 637px;	
+	}
+	&__title {
+		@include font-FuturisExtra;
+		font-size: 11px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #FD335D;
+	}
+	&__subTitle {
+		@include font-FuturisExtra;
+		font-size: 24px;
+		line-height: 50px;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #23F6F0;
+	}
+	&__badge {
+		background: #FFFFFF;
+		border-radius: 12px;
+		padding: 9px;
+		@include font-ProximaNova;
+		font-size: 11px;
+		line-height: 125.18%;
+		text-transform: uppercase;
+		color: #FD335D;
+	}
+	&__text {
+		font-family: Proxima Nova;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 125.18%;
+		color: #5A5A5A;
+		position: relative;
+		max-width: 100%;
+		&:before {
+			content: '';
+
+			position: absolute;
+			top: 9px;
+			left: -18px;
+
+			width: 11px;
+			height: 4px;
+
+			background: #5A5A5A;
+		}
+	}
+	&__state {
+		&-count {
+			font-size: 14px;
+			line-height: 30px;
+			margin-top: 13px;
+		}
+	} 
+}
