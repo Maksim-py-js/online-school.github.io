@@ -330,6 +330,7 @@
 .main-title-bl-xl,
 .main-title-bl-md,
 .main-title-r-md,
+.main-title-r-sm,
 .main-title-bl-sm,
 .main-title-w,
 .main-title-w-sm,
@@ -363,6 +364,11 @@
 	@include main-red-color;
 	font-size: 24px;
 }
+.main-title-r-sm {
+	@include main-red-color;
+	font-size: 18px;
+	line-height: 22.53px;
+}
 .main-title-bl-lh-sm {
 	line-height: 35px !important;
 }
@@ -394,6 +400,13 @@
 }
 .main-sub-title-bl-sm {	
 	@include main-blue-color;
+	text-transform: uppercase;
+}
+.main-sub-title-grey-extra-sm {	
+	@include font-FuturisExtra;
+	@include main-light-grey-color;
+	font-size: 11px;
+	line-height: 125.18%;
 	text-transform: uppercase;
 }
 .main-text-w-sm {
@@ -611,6 +624,7 @@
 				color: rgba(255, 255, 255, 0.1);
 				&:hover {
 					cursor: no-drop;
+					background: #2D2B2B;
 				}
 				&:after,
 				&:before {
@@ -683,10 +697,60 @@
 		}
 	}
 	&__state {
+		button {
+			&:hover {
+				background: #fff;
+			}
+		}
 		&-count {
 			font-size: 14px;
 			line-height: 30px;
 			margin-top: 13px;
 		}
 	} 
+}
+
+.review {
+	&__image {
+		max-width: 131px;
+	}
+	&__text-bl,
+	&__text-r {
+		position: relative;
+		&:before,
+		&:after {
+			content: '';
+			width: 20px;
+			height: 15.62px;
+			position: absolute;
+		}
+		&:before {
+			left: -10px;
+			top: 5px;
+		}
+		&:after {
+			right: -10px;
+			bottom: 6px;
+		}
+	}
+	&__text-bl {
+		&:before,
+		&:after {
+			background: transparent url('../images/svg/icons/quotes-blue.svg') 50% 50% no-repeat;
+		}
+	}
+	&__text-r {
+		&:before,
+		&:after {
+			background: transparent url('../images/svg/icons/quotes-red.svg') 50% 50% no-repeat;
+		}
+	}
+}
+.asdhaskdhkjh {
+	margin-left: -310px !important;
+	margin-right: auto;
+}
+.bg-dark {
+	background: #000;
+	opacity: .2;
 }

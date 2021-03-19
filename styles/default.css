@@ -9,8 +9,9 @@ button {
   background: transparent;
   outline: none !important;
   height: 100%; }
-  button:hover {
-    cursor: pointer; }
+
+button:hover {
+  cursor: pointer; }
 
 ul {
   margin: 0;
@@ -83,3 +84,9 @@ img {
 .inset-y-center {
   top: 50%;
   transform: translateY(-50%); }
+
+.line-height-40 {
+  line-height: 40px !important; }
+
+.line-height-28 {
+  line-height: 28px !important; }

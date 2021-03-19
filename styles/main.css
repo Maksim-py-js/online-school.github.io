@@ -245,6 +245,7 @@
 .main-title-bl-xl,
 .main-title-bl-md,
 .main-title-r-md,
+.main-title-r-sm,
 .main-title-bl-sm,
 .main-title-w,
 .main-title-w-sm,
@@ -279,6 +280,11 @@
   color: #FD335D;
   font-size: 24px; }
 
+.main-title-r-sm {
+  color: #FD335D;
+  font-size: 18px;
+  line-height: 22.53px; }
+
 .main-title-bl-lh-sm {
   line-height: 35px !important; }
 
@@ -312,6 +318,15 @@
 
 .main-sub-title-bl-sm {
   color: #23F6F0;
+  text-transform: uppercase; }
+
+.main-sub-title-grey-extra-sm {
+  font-family: FuturisExtra;
+  font-style: normal;
+  font-weight: bold;
+  color: #5A5A5A;
+  font-size: 11px;
+  line-height: 125.18%;
   text-transform: uppercase; }
 
 .main-text-w-sm {
@@ -528,7 +543,8 @@
   color: rgba(255, 255, 255, 0.1); }
 
 .freebie-disabled .freebie__state button:hover {
-  cursor: no-drop; }
+  cursor: no-drop;
+  background: #2D2B2B; }
 
 .freebie-disabled .freebie__state button:after, .freebie-disabled .freebie__state button:before {
   display: none; }
@@ -599,7 +615,44 @@
   height: 4px;
   background: #5A5A5A; }
 
+.freebie__state button:hover {
+  background: #fff; }
+
 .freebie__state-count {
   font-size: 14px;
   line-height: 30px;
   margin-top: 13px; }
+
+.review__image {
+  max-width: 131px; }
+
+.review__text-bl, .review__text-r {
+  position: relative; }
+
+.review__text-bl:before, .review__text-bl:after, .review__text-r:before, .review__text-r:after {
+  content: '';
+  width: 20px;
+  height: 15.62px;
+  position: absolute; }
+
+.review__text-bl:before, .review__text-r:before {
+  left: -10px;
+  top: 5px; }
+
+.review__text-bl:after, .review__text-r:after {
+  right: -10px;
+  bottom: 6px; }
+
+.review__text-bl:before, .review__text-bl:after {
+  background: transparent url("../images/svg/icons/quotes-blue.svg") 50% 50% no-repeat; }
+
+.review__text-r:before, .review__text-r:after {
+  background: transparent url("../images/svg/icons/quotes-red.svg") 50% 50% no-repeat; }
+
+.asdhaskdhkjh {
+  margin-left: -310px !important;
+  margin-right: auto; }
+
+.bg-dark {
+  background: #000;
+  opacity: .2; }
