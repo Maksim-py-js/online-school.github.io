@@ -866,3 +866,125 @@
 		color: #23F6F0;
 	}
 }
+
+.progress-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 134px;
+	.number {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 6;
+		transform: translate(-50%, -50%);		
+		@include font-FuturisExtra;
+		font-size: 24px;
+		line-height: 30px;
+		text-align: center;
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: #23F6F0;
+	}
+	.outer {
+	  position: absolute;
+	  z-index: 7;
+	  height: 100%;
+	  width: 100%;
+	  border-radius: 100%;
+	}
+}
+.progress-bar {
+	height: 134px;
+	width: 134px;
+	position: relative;
+	transform: rotate(90deg);
+	.inner,
+	.circle {
+	  position: absolute;
+	  z-index: 6;
+	  height: 100%;
+	  width: 100%;
+	  border-radius: 100%;
+	}
+	.inner{
+	  top: 50%;
+	  left: 50%;
+	  height: 92.44px;
+	  width: 92.44px;
+	  margin: -46.22px 0 0 -46.22px;
+	  background-color: #1F1F1F;
+	  border-radius: 100%;
+	}
+	.circle{
+		z-index: 1;
+		box-shadow: none;
+		transform: scaleX(-1);
+
+	}
+	.bar{
+	  position: absolute;
+	  height: 100%;
+	  width: 100%;
+	  background: transparent;
+	  -webkit-border-radius: 100%;
+	  clip: rect(0px, 134px, 134px, 67px);
+	}
+}
+.circle {
+	.bar {
+		.progress {
+			position: absolute;
+			height: 100%;
+			width: 100%;
+			-webkit-border-radius: 100%;
+			clip: rect(0px, 67px, 134px, 0px);
+		}
+		.progress,
+		.dot span{
+			background: #23F6F0;
+		}
+	}
+	.left .progress{
+	  z-index: 1;
+	  animation: left 4s linear both;
+	}
+	.right{
+	  z-index: 3;
+	  transform: rotate(180deg);
+	  .progress{
+		  animation: right 5s linear both;
+		  animation-delay: 5s;
+		}
+	}
+	.dot{
+	  z-index: 2;
+	  position: absolute;
+	  left: 50%;
+	  top: 50%;
+	  width: 50%;
+	  height: 10px;
+	  margin-top: -5px;
+	  animation: dot 8s linear both;
+	  transform-origin: 0% 50%;
+	  span {
+		  position: absolute;
+		  right: 0;
+		  width: 10px;
+		  height: 10px;
+		  border-radius: 100%;
+		}
+	}
+} 
+@keyframes dot{
+  0% {
+    transform: rotate(-90deg);
+  }
+  50% {
+    transform: rotate(90deg);
+    z-index: 4;
+  }
+  100% {
+    transform: rotate(270deg);
+    z-index: 4;
+  }
+}
