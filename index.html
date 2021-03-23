@@ -10,11 +10,15 @@
 	<link rel="stylesheet" type="text/css" href="./styles/animate.css">
 	<link rel="stylesheet" type="text/css" href="fonts/stylesheet.css">
 	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<link rel="icon" 
+      type="image/png" 
+      href="images/svg/logo.svg">
 </head>
 <body>
 	<header class="header container mt-8">
 		<div class="flex justify-between items-center">
-			<div class="header__logo"></div>
+			<div class="header__logo"><img src="images/png/logo.png"></div>
 			<nav class="horizontal_navs w-100 max-w-47 flex justify-between">
 				<li><a href="#">бесплатно</a></li>
 				<li><a href="#">индивидуально</a></li>
@@ -101,7 +105,8 @@
 		<button class="button button-blue button-glitch mt-12 min-w-14">тык</button>
 	</div>
 
-	<div class="container container-grey flex justify-between items-center pt-8 px-12 pb-12 mb-16 mt-64">
+	<div class="container flex justify-between items-center pt-8 px-12 pb-12 mb-16 mt-64">
+		<div class="absolute container-grey inset-0 -z-2 w-full"></div>
 		<div>
 			<div class="main-sub-title-r-sm max-w-26">в режиме реального времени</div>
 			<div class="main-title-bl-md main-title-bl-lh-sm max-w-26 mb-2">приобретай курсы или индивидуальные часы</div>
@@ -115,7 +120,7 @@
 				<br>
 				первых минут бесплатно
 			</div>
-			<div class="text-center mt-8"><button class="button button-blue">попробовать</button></div>	
+			<div class="text-center mt-8"><button class="button button-blue button-glitch">попробовать</button></div>	
 		</div>
 	</div>
 
@@ -169,28 +174,28 @@
 			<img src="images/svg/4.svg">
 		</div>
 		<div class="ml-auto mr-0 max-w-30">
-			<div class="main-title-bl-md main-title-bl-lh-sm text-right mb-12">
+			<div class="main-title-bl-md main-title-bl-lh-sm text-right mb-12" id="trajectory-container">
 				Курс -
 				<br> в любой непонятной
 				<br> ситуации вали все на 
 				<br> дизайнера
 			</div>
 			<div class="trajectory ml-auto mr-0">
-				<div class="trajectory__event">
+				<div class="trajectory__event active active-line">
 					<div class="trajectory__line">
-						<div class="number active"><span>1</span></div>
-						<div class="line active"></div>
-					</div>
-					<div class="trajectory__text main-sub-title-sm active">
-						За 7 дней ты узнаешь, что HTmL это не микроорганизмы, которые живут на поверхности океана
-					</div>
-				</div>
-				<div class="trajectory__event">
-					<div class="trajectory__line">
-						<div class="number active"><span>2</span></div>
+						<div class="number"><span>1</span></div>
 						<div class="line"></div>
 					</div>
-					<div class="trajectory__text main-sub-title-sm active">
+					<div class="trajectory__text main-sub-title-sm">
+						За 7 дней ты узнаешь, что HTmL это не микроорганизмы, которые живут на поверхности океана
+					</div>
+				</div>			
+				<div class="trajectory__event active">
+					<div class="trajectory__line">
+						<div class="number"><span>2</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
 						Сверстаешь свой первый “ Все супер, только переделайте пожалуйста. все!”
 					</div>
 				</div>
@@ -222,6 +227,102 @@
 					</div>
 				</div>
 			</div>
+			<!-- <div class="trajectory ml-auto mr-0">
+				<div class="trajectory__event relative" id="trajectory1">
+					<div class="trajectory__line">
+						<div class="number"><span>1</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						За 7 дней ты узнаешь, что HTmL это не микроорганизмы, которые живут на поверхности океана
+					</div>
+
+					<div class="trajectory__event absolute top-0 active z-1" id="absolute_trajectory1">
+						<div class="trajectory__line">
+							<div class="number"><span>1</span></div>
+							<div class="line"></div>
+						</div>
+						<div class="trajectory__text main-sub-title-sm">
+							За 7 дней ты узнаешь, что HTmL это не микроорганизмы, которые живут на поверхности океана
+						</div>
+					</div>
+				</div>
+				
+
+
+				<div class="trajectory__event relative" id="trajectory2">
+					<div class="trajectory__line">
+						<div class="number"><span>2</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Сверстаешь свой первый “ Все супер, только переделайте пожалуйста. все!”
+					</div>
+					<div class="trajectory__event absolute top-0 active z-1" id="absolute_trajectory2">
+						<div class="trajectory__line">
+							<div class="number"><span>2</span></div>
+							<div class="line"></div>
+						</div>
+						<div class="trajectory__text main-sub-title-sm">
+							Сверстаешь свой первый “ Все супер, только переделайте пожалуйста. все!”
+						</div>
+					</div>
+				</div>
+				<div class="trajectory__event relative" id="trajectory3">
+					<div class="trajectory__line">
+						<div class="number"><span>3</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Больше никогда не попросишь у программиста починить твой сраный утюг
+					</div>
+					<div class="trajectory__event absolute top-0 active z-1" id="absolute_trajectory3">
+						<div class="trajectory__line">
+							<div class="number"><span>3</span></div>
+							<div class="line"></div>
+						</div>
+						<div class="trajectory__text main-sub-title-sm">
+							Больше никогда не попросишь у программиста починить твой сраный утюг
+						</div>
+					</div>
+				</div>
+				<div class="trajectory__event relative" id="trajectory4">
+					<div class="trajectory__line">
+						<div class="number"><span>4</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Тут должно было быть описание того чему ты научишся но дизайнер не написал этого
+					</div>
+					<div class="trajectory__event absolute top-0 active z-1" id="absolute_trajectory4">
+						<div class="trajectory__line">
+							<div class="number"><span>4</span></div>
+							<div class="line"></div>
+						</div>
+						<div class="trajectory__text main-sub-title-sm">
+							Тут должно было быть описание того чему ты научишся но дизайнер не написал этого
+						</div>
+					</div>
+				</div>
+				<div class="trajectory__event relative" id="trajectory5">
+					<div class="trajectory__line">
+						<div class="number"><span>5</span></div>
+						<div class="line"></div>
+					</div>
+					<div class="trajectory__text main-sub-title-sm">
+						Тут должно было быть описание того чему ты научишся но дизайнер не написал этого
+					</div>
+					<div class="trajectory__event absolute top-0 active z-1" id="absolute_trajectory5">
+						<div class="trajectory__line">
+							<div class="number"><span>5</span></div>
+							<div class="line"></div>
+						</div>
+						<div class="trajectory__text main-sub-title-sm">
+							Тут должно было быть описание того чему ты научишся но дизайнер не написал этого
+						</div>
+					</div>
+				</div>
+			</div> -->
 		</div>
 	</div>
 
@@ -376,7 +477,7 @@
 		<div class="main-title-bl-xl max-w-2xl mr-0 ml-auto"><span>акция.</span><br>Приведи друга и<br> заплати за друга тоже.</div>
 	</div>
 
-	<div class="container mt-96 mb-40">
+	<div class="container freebie-container mt-96 mb-40">
 		<div class="main-title-bl-xl text-center mb-16">Халява</div>
 
 		<div class="freebie flex justify-between items-center">
@@ -504,7 +605,14 @@
 		</div>
 	</div>
 
-	<div class="grid-container mt-40">
+	<div class="container mt-40 mb-16">
+		<div class="main-title-bl-md text-center line-height-40 mb-6">работы наших учеников</div>
+		<div class="main-sub-title-sm max-w-30 text-center w-full mx-auto">
+			они тоже начинали с нуля и сомневались, что у них не получится, но рискнули
+		</div>
+	</div>
+
+	<div class="grid-container mt-16">
 		<div class="grid-card">
 			<div class="grid-card-image">
 				<div class="grid-card-bg"></div>
@@ -579,67 +687,131 @@
 	</div>
 
 	<div class="container progress-bars py-48 flex justify-between" id="progress-bars">
-
-		<div class="progress-wrapper">
-			<div class="number progress-bar-number">0%</div>	
-			<div class="outer"></div>			
-			<div class="progress-bar" data-progress="89">
-				<div class="inner"></div>
-					<div class="circle">
-				        <div class="dot"></div>
-						<div class="bar left">
-							<div class="progress progress-bar-left">
+		<div class="w-full max-w-xs">
+			<div class="progress-wrapper mx-auto">
+				<div class="number progress-bar-percent">0%</div>	
+				<div class="outer"></div>			
+				<div class="progress-bar" data-progress="89">
+					<div class="inner"></div>
+						<div class="circle">
+							<div class="bar left">
+								<div class="progress progress-bar-left">
+							</div>
 						</div>
-					</div>
-					<div class="bar right">
-						<div class="progress progress-bar-right"></div>
+						<div class="bar right">
+							<div class="progress progress-bar-right"></div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div data-count="13054" class="progress-bar-count main-title-bl-xl text-center mt-8">13054</div>
+			<div class="main-title-bl-md text-center mt-8 line-height-30">выбрали<br> нас</div>
 		</div>
-
-		<div class="progress-wrapper">
-			<div class="number progress-bar-number">0%</div>	
-			<div class="outer"></div>			
-			<div class="progress-bar" data-progress="91">
-				<div class="inner"></div>
-					<div class="circle">
-				        <div class="dot"></div>
-						<div class="bar left">
-							<div class="progress progress-bar-left">
+		<div class="w-full max-w-xs">
+			<div class="progress-wrapper mx-auto">
+				<div class="number progress-bar-percent">0%</div>	
+				<div class="outer"></div>			
+				<div class="progress-bar" data-progress="91">
+					<div class="inner"></div>
+						<div class="circle">
+							<div class="bar left">
+								<div class="progress progress-bar-left">
+							</div>
 						</div>
-					</div>
-					<div class="bar right">
-						<div class="progress progress-bar-right"></div>
+						<div class="bar right">
+							<div class="progress progress-bar-right"></div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div data-count="46005" class="progress-bar-count main-title-bl-xl text-center mt-8 ">46005</div>
+			<div class="main-title-bl-md text-center mt-8 line-height-30">совместных проектов</div>
 		</div>
-
-		<div class="progress-wrapper">
-			<div class="number progress-bar-number">0%</div>	
-			<div class="outer"></div>			
-			<div class="progress-bar" data-progress="96">
-				<div class="inner"></div>
-					<div class="circle">
-				        <div class="dot"></div>
-						<div class="bar left">
-							<div class="progress progress-bar-left">
+		<div class="w-full max-w-xs">
+			<div class="progress-wrapper mx-auto">
+				<div class="number progress-bar-percent">0%</div>	
+				<div class="outer"></div>			
+				<div class="progress-bar" data-progress="96">
+					<div class="inner"></div>
+						<div class="circle">
+							<div class="bar left">
+								<div class="progress progress-bar-left">
+							</div>
 						</div>
-					</div>
-					<div class="bar right">
-						<div class="progress progress-bar-right"></div>
+						<div class="bar right">
+							<div class="progress progress-bar-right"></div>
+						</div>
 					</div>
 				</div>
 			</div>
+			<div data-count="11804" class="progress-bar-count main-title-bl-xl text-center mt-8">11804</div>
+			<div class="main-title-bl-md text-center mt-8 line-height-30">положительных отзыва</div>
 		</div>
+	</div>
 
+	<div class="container mb-24">
+		<div class="main-title-bl-md text-center max-w-lg w-full mx-auto line-height-30 mb-6">
+			Если ты долистал сюда, то тебе будет интересно даже это
+		</div>
+		<div class="main-sub-title-sm max-w-30 text-center w-full mx-auto">
+			Эти статьи пишут наши ведущие специалисты и обычные ребята в своем личном микро-блоге. зарегистрируйся, чтобы обсуждать работы других и делиться опытом
+		</div>
+	</div>
+
+	<div class="articles mb-16">
+		<div class="flex justify-between flex-wrap">
+			<div class="articleCard my-7">
+				<div class="relative">
+					<div class="articleCard__image">
+						<img src="">
+					</div>
+					<div class="absolute articleCard__badge badge-md-bl">код</div>
+				</div>
+				<div class="flex justify-between items-center">
+					<div class="articleCard__name">#статья</div>
+					<div>
+						<span class="articleCard__date">27 февраля</span>
+						<span class="articleCard__views">1212</span>
+					</div>			
+				</div>
+				<div class="articleCard__title main-title-bl-md">
+					как приВЯЗАТЬ ДОМЕН К ХОСТИНГУ
+				</div>	
+				<div class="main-sub-title-sm">
+					В данной статье рассмотрим, как прикрепить доменное имя к хостингу (...)
+				</div>
+			</div>
+			<div class="articleCard my-7">
+				<div class="relative">
+					<div class="articleCard__image">
+						<img src="">
+					</div>
+					<div class="absolute articleCard__badge badge-md-r">ДИЗАЙН</div>
+				</div>
+				<div class="flex justify-between items-center">
+					<div class="articleCard__name">#статья</div>
+					<div>
+						<span class="articleCard__date">26 февраля</span>
+						<span class="articleCard__views">6212</span>
+					</div>			
+				</div>
+				<div class="articleCard__title main-title-bl-md">
+					КАК СДЕЛАТЬ ЭФФЕКТ КАПЕЛЬ
+				</div>	
+				<div class="main-sub-title-sm">
+					В СТАТЬЕ ПОДРОБНАЯ ИНСТРУКЦИЯ, КАК РАСПЛАВИТЬ ШРИФТ(...)
+				</div>
+			</div>
+		</div>
+		<button class="button button-blue button-glitch w-56 mx-auto block mt-14">ЕЩЕ</button>
 	</div>
 
 	<script
   src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
   crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js" integrity="sha512-wK2NuxEyN/6s53M8G7c6cRUXvkeV8Uh5duYS06pAdLq4ukc72errSIyyGQGYtzWEzvVGzGSWg8l79e0VkTJYPw==" crossorigin="anonymous"></script>
 	<script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>
