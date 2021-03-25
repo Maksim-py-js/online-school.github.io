@@ -430,32 +430,40 @@
 					display: none;
 				}
 			}
-			.trajectory__event {
-				.trajectory__line {
-					.line {
-						display: none;
-					}
+			.trajectory__line.active {
+				.line {
+					display: none;
 				}
 			}
+			
 		}
-		&.active {
-			transition: 1s;
-			.number {
-				@include main-blue-bg;
-			}
-			.trajectory__text {
-				@include main-blue-color;
-			}
+		.trajectory__text.active {
+			@include main-blue-color;
+			position: absolute !important;
+			left: 73px;
+			opacity: 0;
 		}
-		&.active-line {			
-			.trajectory__line {				
+				
+		.trajectory__line {
+			&.active { 
+				height: 0;
+				overflow: hidden;
+				margin-left: -71px;
+				margin-top: 6px;
+				margin-bottom: -7px;
+				.number {
+					@include main-blue-bg;
+				}
 				.line {
+					height: 100%;
 					display: block;
 					width: 5px;
-			    	@include main-blue-bg;
+					@include main-blue-bg;
 				}
-			}
+			} 
 		}
+			
+		
 	}	
 	&__line {
 		position: relative;

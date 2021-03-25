@@ -343,19 +343,27 @@
 .trajectory__event:last-child .trajectory__line .line {
   display: none; }
 
-.trajectory__event:last-child .trajectory__event .trajectory__line .line {
+.trajectory__event:last-child .trajectory__line.active .line {
   display: none; }
 
-.trajectory__event.active {
-  transition: 1s; }
+.trajectory__event .trajectory__text.active {
+  color: #23F6F0;
+  position: absolute !important;
+  left: 73px;
+  opacity: 0; }
 
-.trajectory__event.active .number {
+.trajectory__event .trajectory__line.active {
+  height: 0;
+  overflow: hidden;
+  margin-left: -71px;
+  margin-top: 6px;
+  margin-bottom: -7px; }
+
+.trajectory__event .trajectory__line.active .number {
   background: #23F6F0; }
 
-.trajectory__event.active .trajectory__text {
-  color: #23F6F0; }
-
-.trajectory__event.active-line .trajectory__line .line {
+.trajectory__event .trajectory__line.active .line {
+  height: 100%;
   display: block;
   width: 5px;
   background: #23F6F0; }

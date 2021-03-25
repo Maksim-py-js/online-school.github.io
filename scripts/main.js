@@ -213,3 +213,72 @@ $(window).scroll(function() {
 // 	  }
 // 	});
 // }
+
+
+const data_trajectory = [
+	{
+		trajectoryId: "#trajectoryId_1",
+		lineId: "lineId_1",
+		height: "",
+		textId: "textId_1"
+	},
+	{
+		trajectoryId: "#trajectoryId_2",
+		lineId: "lineId_2",
+		height: "",
+		textId: "textId_2"
+	},
+	{
+		trajectoryId: "#trajectoryId_3",
+		lineId: "lineId_3",
+		height: "",
+		textId: "textId_3"
+	},
+	{
+		trajectoryId: "#trajectoryId_4",
+		lineId: "lineId_4",
+		height: "",
+		textId: "textId_4"
+	},
+	{
+		trajectoryId: "#trajectoryId_5",
+		lineId: "lineId_5",
+		height: "",
+		textId: "textId_5"
+	}
+];
+
+for (var i = 0; i < data_trajectory.length; i++) {
+
+	data_trajectory[i].height = parseInt($(data_trajectory[i].trajectoryId).css('height'));
+
+	console.log(data_trajectory[i].trajectoryId);
+
+	console.log(data_trajectory[i].height);
+
+	gsap.to(('#' + data_trajectory[i].lineId), {
+	  scrollTrigger: {
+	      trigger: (data_trajectory[i].trajectoryId),
+	        scrub: true,
+	        // markers: true,
+	        start: "start 70%",
+			end: "bottom 70%"
+	  },
+	  height: () => {
+	      return (data_trajectory[i].height + 'px');
+	  }
+	});
+
+	gsap.to(('#' + data_trajectory[i].textId), {
+	  scrollTrigger: {
+	      trigger: (data_trajectory[i].trajectoryId),
+	        scrub: true,
+	        // markers: true,
+	        start: "start 70%",
+			end: "bottom 70%"
+	  },
+	  opacity: () => {
+	      return (1);
+	  }
+	});
+}
